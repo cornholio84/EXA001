@@ -1,0 +1,25 @@
+﻿<Window x:Class="EXA001.Add_data"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Database Table Inserter" Height="450" Width="800">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <!-- ComboBox for selecting the table -->
+        <ComboBox x:Name="TableComboBox" Grid.Row="0" Width="200" Margin="0,0,0,20"
+                  SelectionChanged="TableComboBox_SelectionChanged">
+            <!-- Items will be added dynamically in the code-behind -->
+        </ComboBox>
+
+        <!-- StackPanel to hold dynamic input fields -->
+        <StackPanel x:Name="FieldsPanel" Grid.Row="1" VerticalAlignment="Top" />
+
+        <!-- Button to insert data -->
+        <Button x:Name="InsertButton" Grid.Row="2" Width="100" Height="30" Content="Insert Data"
+                Click="InsertButton_Click" />
+    </Grid>
+</Window>
